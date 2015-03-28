@@ -1,0 +1,16 @@
+<<<<<<< HEAD
+/bin/
+=======
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+>>>>>>> 00feafcd7a139663876c0f19eba985c550cdee0a
