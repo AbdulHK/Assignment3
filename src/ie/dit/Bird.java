@@ -11,6 +11,10 @@ public class Bird {
 		x = 300;
 		y = 300;
 	}
+	void move() {
+		y += speed;
+		parent.moveBird();
+	}
 
 	
 
