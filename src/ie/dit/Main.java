@@ -55,32 +55,8 @@ public class Main extends PApplet {
 
 	}
 
-	void reset() {
-		stop = false;
-		score = 0;
-		bird.y = 400;
-
-		for (int i = 0; i < 3; i++) {
-			pipe[i].xPos += 550;
-			pipe[i].cashed = false;
-		}
-	}
-
 
 	
 
-	public void moveBird() {
-		for (int i = 0; i < 3; i++) {
-			pipe[i].xPos -= 3;
-		}
-	}
-
-	public void keyPressed() {
-		bird.jump();
-		start = true;
-
-		if (stop) {
-			reset();
-		}
-	}
+	
 }
