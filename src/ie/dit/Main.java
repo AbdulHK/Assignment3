@@ -54,7 +54,15 @@ public class Main extends PApplet {
 		}
 
 	}
+	
+	public void mousePressed() {
+		bird.jump();
+		start = true;
 
+		if (stop) {
+			reset();
+		}
+	}
 
 	
 
