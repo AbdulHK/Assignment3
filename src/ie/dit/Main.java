@@ -42,16 +42,10 @@ public class Main extends PApplet {
 		}
 		} else {
 			text("Click to Start", 250, 250);
-			textAlign(RIGHT);
-			text("Max Score: " + max, 200, 300);
-			text("Amount of Games: " + count, 200, 320);
-			textAlign(CENTER);
+			
 		}
 
-		text("Score: " + score, 250, 450);
-		if (score % 10 == 0 && score != 0) {
-			text("B O N U S    +3", 250, 250);
-		}
+		
 
 	}
 	

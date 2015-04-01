@@ -22,14 +22,6 @@ void jump() {
 		speed = -9;
 	}
 
-	
-
-	void drawBird()
-	{
-		
-	}
-
-	
 
 	}
 
