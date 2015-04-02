@@ -13,10 +13,12 @@ public class Main extends PApplet {
 	int max = 0, count = 0;
 
 
-	public void setup() {
+	public void setup()
+	{
 		size(500, 500);
 
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 3; i++)
+			{
 			pipe[i] = new Pipe(i, this);
 		}
 		textAlign(CENTER);
@@ -25,11 +27,14 @@ public class Main extends PApplet {
 		
 	}
 
-	public void draw() {
+	public void draw()
+	
+	{
 
 		background(175, 220, 255);
 
-		if (start) {
+		if (start)
+			{
 
 			bird.drawBird();
 			if (!stop) {
@@ -40,7 +45,9 @@ public class Main extends PApplet {
 			} 
 			
 		}
-		} else {
+	} 
+		else 
+		{
 			text("Click to Start", 250, 250);
 			
 		}
@@ -49,11 +56,13 @@ public class Main extends PApplet {
 
 	}
 	
-	public void mousePressed() {
+	public void mousePressed()
+	{
 		bird.jump();
 		start = true;
 
-		if (stop) {
+		if (stop)
+			{
 			reset();
 		}
 	}
