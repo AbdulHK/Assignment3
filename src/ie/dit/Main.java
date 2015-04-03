@@ -4,15 +4,6 @@ import processing.core.*;
 
 public class Main extends PApplet {
 
-	Bird bird = new Bird(this);
-	Pipe[] pipe = new Pipe[3];
-
-	boolean start = false;
-	boolean stop = true;
-	int score = 0;
-	int max = 0, count = 0;
-
-
 	public void setup()
 	{
 		size(500, 500);
