@@ -5,7 +5,8 @@ float speed, x, y;
 	Main parent; // The parent PApplet that we will render ourselves onto
 	int diffculties=0;
 
-	Bird(Main p) {
+	Bird(Main p)
+	{
 		parent = p;
 		x = 300;
 		y = 300;
@@ -18,6 +19,10 @@ float speed, x, y;
 	void jump()
 	{
 		speed = -9;
+	}
+	void drag() 
+	{
+		speed += 0.4;
 	}
 	}
 
