@@ -24,5 +24,8 @@ float speed, x, y;
 	{
 		speed += 0.4;
 	}
+	void drawBird()
+	{
+	}
 	}
 

@@ -11,5 +11,12 @@ public class Pipe {
 		xPos = 100 + (i * 200);
 		clearance = parent.random(200) + 100;
 	}
+	void drawPipe() {
+
+		parent.fill(122, 48, 0);
+		parent.rect(xPos, 0, 50, clearance - 80);
+		parent.rect(xPos, clearance + 80, 50, 500);
+	}
+
 }
 

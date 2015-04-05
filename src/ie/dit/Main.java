@@ -39,24 +39,20 @@ public class Main extends PApplet {
 		ellipse(400, 100, 80, 80);
 		ellipse(450, 120, 50, 50);
 		ellipse(480, 100, 30, 30);
-		if (start)
-			{
+		if (start) {
 
-			bird.drawBird();
-			if (!stop) {
+			if (chdifficult) {
 
-				bird.move();
-				bird.drag();
+				if (!Pause) {
+					Game();
+				} else {
+					// Back
+					if (mouseX >= 200 && mouseX <= 200 + 100 && mouseY >= 200
+							&& mouseY <= 200 + 100) {
 
-			} 
-			
-		}
-	} 
-		else 
-		{
-			text("Click to Start", 250, 250);
-			
-		}
+						menuPause = 1;
+						rect(200, 240, 10, 10);
+					}
 
 		
 
