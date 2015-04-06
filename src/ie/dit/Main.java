@@ -1,8 +1,17 @@
 package ie.dit;
 
 import processing.core.*;
+import de.bezier.data.sql.*;
+
+import java.io.*;
 
 public class Main extends PApplet {
+	
+	Bird bird = new Bird(this);
+	Pipe[] pipe = new Pipe[3];
+
+	boolean start = false;
+	boolean stop = true;
 
 	public void setup()
 	{
