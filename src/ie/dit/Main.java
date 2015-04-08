@@ -12,6 +12,18 @@ public class Main extends PApplet {
 
 	boolean start = false;
 	boolean stop = true;
+	boolean chdifficult = false;
+	int score = 0;
+	int max = 0, count = 0;
+	boolean binsert = true;
+
+	boolean Pause = false;
+	int menuPause = 0;
+
+	int difficult = 0;
+
+	SQLite db;
+
 
 	public void setup()
 	{
