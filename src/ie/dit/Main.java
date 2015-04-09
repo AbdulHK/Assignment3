@@ -35,10 +35,25 @@ public class Main extends PApplet {
 		}
 		textAlign(CENTER);
 		textFont(createFont("Arial", 16, true), 16);
+			db = new SQLite(this, "Database.db"); // open database file
 
+		if (db.connect()) {
+			// read all in table "tablescore"
+			db.query("SELECT MAX(score) as max FROM tablescore");
+
+			while (db.next()) {
+				max = db.getInt("max");
+			}
+
+			db.query("SELECT COUNT(score) as count FROM tablescore");
+			while (db.next()) {
+				count = db.getInt("count");
+			}
+		}
 		
 	}
-
+	int place = 220;
+	boolean bplace = false;
 	public void draw()
 	
 	{
