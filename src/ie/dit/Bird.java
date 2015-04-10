@@ -26,6 +26,17 @@ float speed, x, y;
 	}
 	void drawBird()
 	{
+		parent.stroke(255);
+		parent.fill(255, 240, 85);
+		parent.strokeWeight(2);
+
+		parent.fill(255, 240, 85);
+		parent.ellipse(x, y, 30, 20);
+		parent.ellipse(x + 5, y - 15, 15, 15);
+
+		parent.fill(255, 0, 0);
+		parent.ellipse(x + 8, y - 15, 5, 5);
+		parent.ellipse(x + 12, y - 10, 15, 5);
 	}
 	}
 

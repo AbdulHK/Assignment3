@@ -17,6 +17,15 @@ public class Pipe {
 		parent.rect(xPos, 0, 50, clearance - 80);
 		parent.rect(xPos, clearance + 80, 50, 500);
 	}
+	void checkPosition() {
+
+		if (xPos < 0)
+			{
+			
+		}
+	if (xPos < 250 && !cashed) {
+			
+		}
 
 }
 
