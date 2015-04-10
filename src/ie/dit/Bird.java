@@ -25,6 +25,11 @@ float speed, x, y;
 		speed += 0.4;
 	}
 	
-	
+	void drawBird() {
+		parent.stroke(255);
+		parent.fill(255, 240, 85);
+		parent.strokeWeight(2);
+
+	}
 }
 
