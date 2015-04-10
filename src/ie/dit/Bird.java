@@ -30,5 +30,5 @@ float speed, x, y;
 		parent.fill(255, 240, 85);
 		parent.strokeWeight(2);
 	}
-	}
+}
 
