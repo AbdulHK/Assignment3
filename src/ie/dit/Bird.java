@@ -1,30 +1,30 @@
 package ie.dit;
 
-float speed, x, y;
+public class Bird {
+
+	float speed, x, y;
 	boolean cashed = false;
 	Main parent; // The parent PApplet that we will render ourselves onto
-	int diffculties=0;
 
-	Bird(Main p)
-	{
+	Bird(Main p) {
 		parent = p;
 		x = 300;
 		y = 300;
 	}
-	void move()
-	{
+
+	void move() {
 		y += speed;
 		parent.moveBird();
 	}
-	void jump()
-	{
+
+	void jump() {
 		speed = -9;
 	}
-	void drag() 
-	{
+
+	void drag() {
 		speed += 0.4;
 	}
-	
+
 	void drawBird() {
 		parent.stroke(255);
 		parent.fill(255, 240, 85);
@@ -37,7 +37,29 @@ float speed, x, y;
 		parent.fill(255, 0, 0);
 		parent.ellipse(x + 8, y - 15, 5, 5);
 		parent.ellipse(x + 12, y - 10, 15, 5);
+	}
+
+	void checkClash() {
+
+		if (y > 500) {
+			parent.setStop(true);
+		}
+
+		if (y < 0) {
+			parent.setStop(true);
+		}
+
+		for (int i = 0; i < 3; i++) {
+
+			if ((x < parent.getPipe(i).xPos + 75 
+					&& x > parent.getPipe(i).xPos - 15)
+					&& (y < parent.getPipe(i).clearance - 80 
+					|| y > parent.getPipe(i).clearance + 80)) {
+
+				parent.setStop(true);
+			}
+
+		}
 
 	}
 }
-
