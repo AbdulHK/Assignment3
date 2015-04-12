@@ -19,13 +19,19 @@ public class Pipe {
 	}
 	void checkPosition() {
 
-		if (xPos < 0)
-			{
-			
+		if (xPos < 0) {
+			xPos += (200 * 3);
+			clearance = parent.random(200) + 100;
+			cashed = false;
 		}
-	if (xPos < 250 && !cashed) {
-			
+
+		if (xPos < 250 && !cashed) {
+			cashed = true;
+
+			parent.incScore();
 		}
+
+	}
 
 }
 
