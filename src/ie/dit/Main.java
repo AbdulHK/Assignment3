@@ -37,11 +37,13 @@ public class Main extends PApplet {
 		textFont(createFont("Arial", 16, true), 16);
 			db = new SQLite(this, "Database.db"); // open database file
 
-		if (db.connect()) {
+		if (db.connect()) 
+		{
 			// read all in table "tablescore"
 			db.query("SELECT MAX(score) as max FROM tablescore");
 
-			while (db.next()) {
+			while (db.next())
+				{
 				max = db.getInt("max");
 			}
 
