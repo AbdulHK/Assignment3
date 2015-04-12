@@ -90,7 +90,140 @@ public class Main extends PApplet {
 						rect(200, 240, 10, 10);
 					}
 
+					// Main Menu
+					if (mouseX >= 200 && mouseX <= 200 + 100 && mouseY >= 250
+							&& mouseY <= 250 + 100) {
+						menuPause = 2;
+
+						rect(200, 290, 10, 10);
+					}
+					
+					if (languge2 == 1)
+					{
+						text("عوده للعب", 250, 250);
+						text("القاىمه الرئيسية", 250, 300);
+					}else{
+						text("Back", 250, 250);
+						text("Main Menu", 250, 300);
+					}
+					
+
+				}
+
+			} else {
+
+				Difficult();
+
+			}
+
+		} else {
+
+			stroke(255);
+			fill(255, 240, 85);
+			strokeWeight(2);
+
+			if (!bplace) {
+				place += 1;
+				if (place > 280) {
+					bplace = true;
+				}
+			} else 
+			{
+				place -= 1;
+				if (place < 221) {
+					bplace = false;
+				}
+			}
+			
+			
+				// birdie
+				fill(255, 240, 85);
+				ellipse(place, 200, 30, 20);
+				ellipse(place + 5, 200 - 15, 15, 15);
+
+				fill(255, 0, 0);
+				ellipse(place + 8, 200 - 15, 5, 5);
+				ellipse(place + 12, 200 - 10, 15, 5);
+
+				fill(255, 255, 255);
+				
+				
+				if(!langChois)
+				{
+				if (mouseX >= 200 && mouseX <= 200 + 100 && mouseY >= 200
+						&& mouseY <= 200 + 100) {
+
+					languge = 1;
+					rect(200, 240, 10, 10);
+				}
+
+				// Main Menu
+				if (mouseX >= 200 && mouseX <= 200 + 100 && mouseY >= 250
+						&& mouseY <= 250 + 100) {
+					languge = 2;
+
+					rect(170, 290, 10, 10);
+				}
+
+				text("إضغط للعربيه", 250, 250);
+				text("Press For English", 250, 300);
+				
+				
+			}else{
+			
+			if(languge2 == 1)
+			{
+				text("إضغط لبدا اللعبه", 250, 250);
+				textAlign(RIGHT);
+				text("أعلى نقاط: " + max, 200, 300);
+				text("عداد الالعاب: " + count, 200, 320);
+				textAlign(CENTER);
+				
+				
+				
+				if (mouseX >= 200 && mouseX <= 200 + 100 && mouseY >= 250
+						&& mouseY <= 250 + 100)
+				{
+					flag = 1 ;
+					
+				}
+			}
+			if(languge2 == 2)
+			{
+				text("Click  to Start", 250, 250);
+				textAlign(RIGHT);
+				text("Max Score: " + max, 200, 300);
+				text("Amount of Games: " + count, 200, 320);
+				textAlign(CENTER);
+				
+				if (mouseX >= 200 && mouseX <= 200 + 100 && mouseY >= 300
+						&& mouseY <= 300 + 100)
+				{
+					flag = 1 ;
+					
+				}
+			}
+			}
+		}
+	       System.out.println(mouseY);
+	       System.out.println(flag);
+	       
 		
+		if (languge2 == 1)
+		{
+			text("النقاط: " + score, 250, 450);
+			if (score % 10 == 0 && score != 0) {
+			text("زيااااادة    +3", 250, 250);
+			}
+		}else
+		{
+			text("Score: " + score, 250, 450);
+			if (score % 10 == 0 && score != 0) {
+			text("B O N U S    +3", 250, 250);
+			}
+		}
+
+	}
 
 	}
 	
