@@ -253,7 +253,10 @@ public class Main extends PApplet {
 		}
 
 	}
-
+	
+	public void incScore() {
+		score++;
+	}
 	}
 	
 
