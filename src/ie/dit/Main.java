@@ -236,6 +236,23 @@ public class Main extends PApplet {
 			pipe[i].cashed = false;
 		}
 	}
+	
+	
+	
+	public void mousePressed() {
+		bird.jump();
+
+		if (start) {
+			chdifficult = true;
+		}
+
+		start = true;
+
+		if (stop) {
+			reset();
+		}
+
+	}
 
 	}
 	
