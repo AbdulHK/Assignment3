@@ -244,7 +244,7 @@ public class Main extends PApplet {
 				}
 			}
 		}
-	       System.out.println(languge2);
+	      // System.out.println(languge2);
 	       //System.out.println(flag);
 	       
 		
@@ -306,7 +306,7 @@ public class Main extends PApplet {
 	void Game() {
 		
 		
-		System.out.println(languge2);
+		//System.out.println(languge2);
 		
 		if(languge2 == 1)
 		{

@@ -49,8 +49,7 @@ public class Bird {
 			parent.setStop(true);
 		}
 
-		for (int i = 0; i < 3; i++)
-			{
+		for (int i = 0; i < 3; i++) {
 
 			if ((x < parent.getPipe(i).xPos + 75 
 					&& x > parent.getPipe(i).xPos - 15)
