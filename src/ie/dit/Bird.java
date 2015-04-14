@@ -53,7 +53,7 @@ public class Bird {
 
 			if ((x < parent.getPipe(i).xPos + 75 
 					&& x > parent.getPipe(i).xPos - 15)
-					&& (y < parent.getPipe(i).clearance - 80 
+					&& (y < parent.getPipe(i).clearance -  (parent.getPipe(i).gap) 
 					|| y > parent.getPipe(i).clearance + 80)) {
 
 				parent.setStop(true);
