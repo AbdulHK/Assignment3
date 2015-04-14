@@ -4,6 +4,8 @@ import processing.core.*;
 import de.bezier.data.sql.*;
 
 import java.io.*;
+ 
+import javax.sound.midi.*;
 
 public class Main extends PApplet {
 	
@@ -25,10 +27,45 @@ public class Main extends PApplet {
 	SQLite db;
 
 
-	public void setup()
-	{
-		size(500, 500);
-
+	 boolean playBackSound = true;
+ 
+    static Sequencer midiPlayer[] = new Sequencer[4];
+ 
+    public void setup() {
+        size(500, 500);
+ 
+        // Sounds
+        // Open an audio input stream.
+        try {
+ 
+            File midiFileStart = new File("res/2.mid");
+            File midiFileBack = new File("res/3.mid");
+            File midiFileJump = new File("res/jump.mid");
+            File midiFileStop = new File("res/stop.mid");
+ 
+            Sequence song[] = new Sequence[4];
+ 
+            song[0] = MidiSystem.getSequence(midiFileStart);
+            song[1] = MidiSystem.getSequence(midiFileBack);
+            song[2] = MidiSystem.getSequence(midiFileJump);
+            song[3] = MidiSystem.getSequence(midiFileStop);
+ 
+            for (int i = 0; i < 4; i++) {
+                midiPlayer[i] = MidiSystem.getSequencer();
+                midiPlayer[i].open();
+                midiPlayer[i].setSequence(song[i]);
+                midiPlayer[i].setLoopCount(0); // repeat 0 times (play once)
+            }
+ 
+        } catch (InvalidMidiDataException | IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (MidiUnavailableException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+ 
+        midiPlayer[0].start();
 		for (int i = 0; i < 3; i++)
 			{
 			pipe[i] = new Pipe(i, this);
