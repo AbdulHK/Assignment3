@@ -6,7 +6,8 @@ import ddf.minim.AudioPlayer;
 import ddf.minim.Minim;
 
 
-public class Main extends PApplet {
+public class Main extends PApplet
+ {
 
 	Bird bird = new Bird(this);
 	Pipe[] pipe = new Pipe[3];
@@ -40,7 +41,8 @@ public class Main extends PApplet {
     AudioPlayer Background ;
   
 	
-	public void setup() {
+	public void setup() 
+	{
 		size(500, 500);
 
 		// Sounds
@@ -55,7 +57,8 @@ public class Main extends PApplet {
 		Stop = minim.loadFile("res/stop.wav");
 			
 		// Initialize array
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 3; i++) 
+		{
 			pipe[i] = new Pipe(i, this);
 		}
 		textAlign(CENTER);
@@ -64,16 +67,19 @@ public class Main extends PApplet {
 		// Database
 		db = new SQLite(this, "Database.db"); // open database file
 
-		if (db.connect()) {
+		if (db.connect()) 
+		{
 			// read all in table "tablescore"
 			db.query("SELECT MAX(score) as max FROM tablescore");
 
-			while (db.next()) {
+			while (db.next())
+				{
 				max = db.getInt("max");
 			}
 
 			db.query("SELECT COUNT(score) as count FROM tablescore");
-			while (db.next()) {
+			while (db.next()) 
+			{
 				count = db.getInt("count");
 			}
 		}
